@@ -40,12 +40,28 @@
 
         <div class="mb-5">
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary" onclick="pruebaBoton()" type="button">Ingresar</button>
+                <button class="btn btn-primary mb-3" onclick="pruebaBoton()" type="button">Ingresar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="mb-5">
+            <div class="d-grid gap-2 col-10 mx-auto">
+                <input id="posicionVerctor" placeholder="Ingrese posicion verctor" type="number" class="form-control"
+                    aria-describedby="passwordHelpBlock">
+                <button type="button" class="btn btn-primary mt-3" onclick="imprimirArreglo()">verctor</button>
+                
+                <label for="inputPassword5 " class="form-label">Agregar Frutas</label>
+                <input id="nombreFruta" placeholder="Ingrese el nombre de la fruta" type="text"
+                    class="form-control" aria-describedby="passwordHelpBlock">
+                <button type="button" class="btn btn-success mt-3" onclick="agregarFruta()">Agregar</button>
+                <button type="button" class="btn btn-danger mt-3" onclick="eliminarFruta()">eliminar</button>
             </div>
         </div>
     </div>
-
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
