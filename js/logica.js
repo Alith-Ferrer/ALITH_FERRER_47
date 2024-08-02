@@ -10,6 +10,7 @@ function pruebaBoton() {
     let pw = document.getElementById('pw').value
 
     if(usuario==user && contraseña==pw){
+        window.open('calculadora.html')
      console.log('ingreso correcto');
 
      } else {
