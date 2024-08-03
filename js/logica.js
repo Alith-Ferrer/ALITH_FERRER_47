@@ -24,6 +24,7 @@ function pruebaBoton() {
 function imprimirArreglo() {
 
     let posicion = document.getElementById('posicionVerctor').value
+    console.log(localStorage.getItem('arregroFrutas'));
     if (posicion >= frutas.length) {
 
         console.log('posicion no valida');
@@ -36,15 +37,16 @@ function imprimirArreglo() {
 }
 function limpiar() {
     document.getElementById('posicionVerctor').value = ''
-    document.getElementById('posicionVerctor').focus() 
+    document.getElementById('posicionVerctor').focus()
 }
 
 function agregarFruta() {
     let nombreFruta = document.getElementById('nombreFruta').value.toLocaleUpperCase()
-    nombreFruta=nombreFruta.trim()
-    if (nombreFruta.trim()!==''){
+    nombreFruta = nombreFruta.trim()
+    if (nombreFruta.trim() !== '') {
         frutas.push(nombreFruta)
         console.log(frutas);
+        guardarStorare(frutas)
         console.log(`Se agrego la fruta" ${nombreFruta}`);
         document.getElementById('nombreFruta').focus()
         document.getElementById('nombreFruta').value = ''
@@ -55,5 +57,15 @@ function agregarFruta() {
 }
 
 function eliminarFruta() {
-    console.log('incorrecta');
+    let posicion = document.getElementById('nombreFruta').value
+    frutas.splice(posicion, 1)
+    guardarStorare(frutas)
+    console.log(frutas);
+    document.getElementById('nombreFruta').focus()
+    document.getElementById('nombreFruta').value = ''
+} 
+
+function guardarStorare(arregro) {
+localStorage.setItem('arregroFrutas',arregro)
+console.log('guardar en Storare');
 } 
